@@ -1,0 +1,18 @@
+{
+  "name": "pramaan-sync",
+  "version": "1.0.0",
+  "description": "PramaanSync — Multi-Vendor DVR/NVR Forensic Analysis Platform",
+  "main": "server/src/index.js",
+  "scripts": {
+    "setup": "cd server && npm install && cd ../client && npm install",
+    "seed": "cd server && node src/seed.js",
+    "test:adapters": "cd server && node src/test-runner.js",
+    "server": "cd server && node src/index.js",
+    "client": "cd client && npm run dev",
+    "dev": "npx -y concurrently \"npm run server\" \"npm run client\"",
+    "build": "cd client && npm run build"
+  },
+  "keywords": ["forensics", "dvr", "nvr", "law-enforcement", "sha256", "chain-of-custody"],
+  "author": "PramaanSync Engineering",
+  "license": "Open-Core"
+}
